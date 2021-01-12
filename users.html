@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+table {
+  
+  width: 50%;
+}
+
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+tr:hover {background-color:lightblue;}
+
+body {
+    background-image: linear-gradient(to right,darkcyan,darkcyan);
+}
+
+h1 {
+  color:white;
+  text-align: center;
+}
+h2{
+    color:yellow;
+    text-align:center;
+}
+
+p {
+  font-family: verdana;
+  color: chartreuse;
+  font-size: 20px;
+  background-color: lightcoral;
+}
+</style>
+</head>
+<body>
+
+<h1>entry till now</h1>
+<table border =1>
+  <table class="center">
+  <tr>
+    <th><p>ID</p></th>
+    <th><p>Fname</p></th>
+    <th><p>Lname</p></th>
+    <th><p>batch</p></th>
+    <th><p>age</p></th>
+    <th><p>gender</p></th>
+    <th><p>  date  </p></th>
+    <th><p>email</p></th>
+    <th><p>phone</p></th>
+    <th><p>Delete</p></th>
+  </tr>
+{% for user in userDetails %}
+<tr> 
+<td><h2>{{user[0]}}</h2></td>
+<td><h2>{{user[1]}}</h2></td>
+<td><h2>{{user[2]}}</h2></td>
+<td><h2>{{user[3]}}</h2></td>
+<td><h2>{{user[4]}}</h2></td>
+<td><h2>{{user[5]}}</h2></td>
+<td><h2>{{user[6]}}</h2></td>
+<td><h2>{{user[7]}}</h2></td>
+<td><h2>{{user[8]}}</h2></td>
+<td><button class="btn btn-primary">Delete</button></td>
+
+</tr>
+  {% endfor %}
+</table>
